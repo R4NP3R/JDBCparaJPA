@@ -1,36 +1,35 @@
-package ranper.domain;
+package ranper.domain.jpa;
 
-import anotação.ColunaTabela;
-import anotação.Tabela;
-import anotação.TipoChave;
-import ranper.dao.Persistente;
+import jakarta.persistence.*;
 
-@Tabela("TB_CLIENTE")
-public class Cliente implements Persistente {
+@Entity
+@Table(name = "TB_CLIENTE")
+public class ClienteJpa2 implements Persistente {
 
-    @ColunaTabela(dbName = "id", setJavaName = "setId")
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="cliente_seq")
+    @SequenceGenerator(name="cliente_seq", sequenceName="sq_cliente", initialValue = 1, allocationSize = 1)
     private Long id;
 
-    @ColunaTabela(dbName = "nome", setJavaName = "setNome")
+    @Column(name = "NOME", nullable = false, length = 50)
     private String nome;
 
-    @TipoChave("getCpf")
-    @ColunaTabela(dbName = "cpf", setJavaName = "setCpf")
+    @Column(name = "CPF", nullable = false, unique = true)
     private Long cpf;
 
-    @ColunaTabela(dbName = "tel", setJavaName = "setTel")
+    @Column(name = "TEL", nullable = false)
     private Long tel;
 
-    @ColunaTabela(dbName = "endereco", setJavaName = "setEnd")
+    @Column(name = "ENDERECO", nullable = false, length = 100)
     private String end;
 
-    @ColunaTabela(dbName = "numero", setJavaName = "setNumero")
+    @Column(name = "NUMERO", nullable = false)
     private Integer numero;
 
-    @ColunaTabela(dbName = "cidade", setJavaName = "setCidade")
+    @Column(name = "CIDADE", nullable = false, length = 100)
     private String cidade;
 
-    @ColunaTabela(dbName = "estado", setJavaName = "setEstado")
+    @Column(name = "ESTADO", nullable = false, length = 50)
     private String estado;
 
     public String getNome() {
@@ -81,5 +80,9 @@ public class Cliente implements Persistente {
     public void setId(Long id) {
         this.id = id;
     }
+
+
+
+
 
 }

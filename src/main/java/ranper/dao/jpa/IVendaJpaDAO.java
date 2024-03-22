@@ -11,6 +11,5 @@ public interface IVendaJpaDAO extends IGenericJpaDAO<VendaJpa, Long> {
 
     public void cancelarVenda(VendaJpa venda) throws TipoChaveNaoEncontradaException, DAOException;
 
-
     public VendaJpa consultarComCollection(Long id);
 }

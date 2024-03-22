@@ -1,7 +1,6 @@
 package ranper.domain.jpa;
 
 import jakarta.persistence.*;
-import ranper.dao.Persistente;
 
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -183,6 +182,7 @@ public class VendaJpa implements Persistente {
     public void setProdutos(Set<ProdutoQuantidadeJpa> produtos) {
         this.produtos = produtos;
     }
+
 
 
 }

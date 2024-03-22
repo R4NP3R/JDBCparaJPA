@@ -4,6 +4,7 @@ import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
+import ranper.dao.generic.jpa.GenericJpaDB1DAO;
 import ranper.domain.jpa.ClienteJpa;
 import ranper.domain.jpa.ProdutoJpa;
 import ranper.domain.jpa.VendaJpa;
@@ -11,7 +12,7 @@ import ranper.exceptions.DAOException;
 import ranper.exceptions.TipoChaveNaoEncontradaException;
 import ranper.dao.generic.jpa.GenericJpaDAO;
 
-public class VendaJpaDAO extends GenericJpaDAO<VendaJpa, Long> implements IVendaJpaDAO {
+public class VendaJpaDAO extends GenericJpaDB1DAO<VendaJpa, Long> implements IVendaJpaDAO {
 
     public VendaJpaDAO() {
         super(VendaJpa.class);

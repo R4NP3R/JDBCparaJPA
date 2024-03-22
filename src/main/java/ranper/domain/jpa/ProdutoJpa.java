@@ -1,7 +1,6 @@
 package ranper.domain.jpa;
 
 import jakarta.persistence.*;
-import ranper.dao.Persistente;
 
 import java.math.BigDecimal;
 

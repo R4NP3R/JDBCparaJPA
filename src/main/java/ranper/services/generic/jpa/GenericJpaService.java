@@ -1,7 +1,7 @@
 package ranper.services.generic.jpa;
 
-import ranper.dao.Persistente;
 import ranper.dao.generic.jpa.IGenericJpaDAO;
+import ranper.domain.jpa.Persistente;
 import ranper.exceptions.DAOException;
 import ranper.exceptions.MaisDeUmRegistroException;
 import ranper.exceptions.TableException;

@@ -9,7 +9,7 @@ import ranper.exceptions.TipoChaveNaoEncontradaException;
 public class VendaExclusaoJpaDAO extends GenericJpaDAO<VendaJpa, Long> implements IVendaJpaDAO {
 
     public VendaExclusaoJpaDAO() {
-        super(VendaJpa.class);
+        super(VendaJpa.class, "");
     }
 
     @Override
